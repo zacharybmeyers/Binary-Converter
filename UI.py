@@ -1,19 +1,25 @@
-import binary_converter
+from binary_converter import binary_to_decimal
+
+
+class OutOfRangeError(Exception):
+    pass
+
+
+def binary_check(a_string):
+    """Checks whether the user's string is valid binary"""
+    for char in a_string:
+        if char == "0" or char == "1":
+            continue
+        else:
+            raise OutOfRangeError
+    print("Decimal: {}".format(binary_to_decimal(a_string)))
+
 
 usr_binary = input("Hello! Welcome to the binary converter. \n"
                    "Please enter your binary number: ")
 
 
-def valid_binary(a_string):
-    """Returns true if a given string is in binary"""
-    valid = True
-    for char in a_string:
-        if char != "0" and char != "1":
-            valid = False
-    return valid
-
-
-if valid_binary(usr_binary) is True:
-    print("Decimal: {}".format(binary_converter.binary_to_decimal(usr_binary)))
-else:
-    print("Invalid input.")
+try:
+    binary_check(usr_binary)
+except OutOfRangeError:
+    print("That value is not in binary!")
