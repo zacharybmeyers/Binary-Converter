@@ -1,6 +1,6 @@
 # Author:       Zachary Meyers
-# Date:         01/06/2021
-# Description:  Functions that convert binary to other bases
+# Date:         01/29/2021
+# Description:  Functions that convert binary to other number bases (decimal, hex)
 
 def binary_to_decimal(binary_str):
     """Converts a binary string to a base 10 decimal number"""

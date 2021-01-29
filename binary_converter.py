@@ -1,7 +1,7 @@
 # Author:       Zachary Meyers
-# Date:         01/06/2021
-# Description:  Provides a simple conversion from binary to decimal,
-#               tests for valid input with try/except
+# Date:         01/29/2021
+# Description:  Provides a simple conversion from unsigned binary to decimal,
+#               tests for valid input with try/except, loops until the user wants to quit
 
 from binary_functions import binary_to_decimal
 
@@ -17,14 +17,29 @@ def binary_check(a_string):
             continue
         else:
             raise OutOfRangeError
-    print("Decimal: {}".format(binary_to_decimal(a_string)))
+    return True
 
 
-usr_binary = input("Hello! Welcome to the binary converter. \n"
-                   "Please enter your binary number: ")
+def main():
+    # greet user
+    print("Hello! Welcome to the unsigned binary converter.\n"
+          "Type 'quit' to exit.")
+
+    # loop until user wants to quit
+    while True:
+        usr_input = input("Unsigned binary: ")
+        # exit loop
+        if usr_input == "quit":
+            break
+        # compute and print decimal conversion
+        try:
+            if binary_check(usr_input) is True:
+                print("Decimal: {}".format(binary_to_decimal(usr_input)))
+        # raise exception for invalid input
+        except OutOfRangeError:
+            print("That value is not in binary!")
+    print("See ya!")
 
 
-try:
-    binary_check(usr_binary)
-except OutOfRangeError:
-    print("That value is not in binary!")
+if __name__ == "__main__":
+    main()
