@@ -1,5 +1,5 @@
 # Author:       Zachary Meyers
-# Date:         01/29/2021
+# Date:         2021-01-29
 # Description:  Provides a simple conversion from unsigned binary to decimal,
 #               tests for valid input with try/except, loops until the user wants to quit
 
@@ -10,14 +10,13 @@ class OutOfRangeError(Exception):
     pass
 
 
-def binary_check(a_string):
+def is_binary(a_string):
     """Checks whether the user's string is valid binary"""
     for char in a_string:
-        if char == "0" or char == "1":
-            continue
-        else:
+        if char != "0" and char != "1":
             raise OutOfRangeError
-    return True
+        else:
+            return True
 
 
 def main():
@@ -33,7 +32,7 @@ def main():
             break
         # compute and print decimal conversion
         try:
-            if binary_check(usr_input) is True:
+            if is_binary(usr_input):
                 print("Decimal: {}".format(binary_to_decimal(usr_input)))
         # raise exception for invalid input
         except OutOfRangeError:

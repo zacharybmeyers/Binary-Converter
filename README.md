@@ -1,5 +1,6 @@
 # Binary Conversions
-Running binary_converter.py provides a Python script that converts unsigned binary to decimal, it imports the necessary functions for conversion from binary_functions.py.
+Running `binary_converter.py` provides a Python script that converts unsigned binary to decimal, 
+it imports the necessary functions for conversion from `binary_functions.py`.
 
 ## This project practices a few key concepts: 
 
@@ -8,8 +9,8 @@ Running binary_converter.py provides a Python script that converts unsigned bina
 * importing modules
 * algorithm design
 
-The file binary_functions.py is a module with functions to convert binary to other number bases. As of right now, it has one algorithm 
-for converting unsigned binary to decimal.
+`binary_functions.py` is a module with functions to convert binary to other number bases. 
+As of right now, it has one algorithm for converting unsigned binary to decimal.
 
 ## Goals for the future:
 

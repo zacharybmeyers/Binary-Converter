@@ -1,5 +1,5 @@
 # Author:       Zachary Meyers
-# Date:         01/29/2021
+# Date:         2021-01-29
 # Description:  Functions that convert binary to other number bases (decimal, hex)
 
 def binary_to_decimal(binary_str):
@@ -14,6 +14,7 @@ def binary_to_decimal(binary_str):
     return decimal
 
 
+# quick test to make sure binary_to_decimal conversion works
 def main():
     print(binary_to_decimal("00000011"))
 
