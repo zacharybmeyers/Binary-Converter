@@ -3,7 +3,7 @@
 # Description:  Provides a simple conversion from unsigned binary to decimal,
 #               tests for valid input with try/except, loops until the user wants to quit
 
-from binary_functions import binary_to_decimal
+from BinaryFunctions import binary_to_decimal
 
 
 class OutOfRangeError(Exception):
